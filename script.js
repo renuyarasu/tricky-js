@@ -1,37 +1,20 @@
 // Tricky JS Program
 console.clear();
 
-// remove duplicate element from an array in JavaScript
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// Understand BigInt in JavaScript ES2020-21
 
-// Solution 01
-/*
-    let obj = {};
-    for (let i of numbers) {
-        obj[i] = true;
-    }   
-    console.log('Object', obj);
+let num = Number.MAX_SAFE_INTEGER;
 
-    let obj_keys = Object.keys(obj);
-    console.log(obj_keys); // ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+console.log('Number_01: ', num); // 9007199254740991
+console.log('Number_02: ', ++num); // 9007199254740992
+console.log('Number_03: ', ++num); // 9007199254740992
+console.log('Number_04: ', ++num); // 9007199254740992
+console.log('Number_05: ', ++num); // 9007199254740992
 
-    let newArray = obj_keys.map(Number);
-    console.log(newArray); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
- */
+let new_num = 9007199254740992n;
 
-// Solution 02
-
-/* let newArray = [];
-let array_length = numbers.length;
-
-for (let i = 0; i < array_length; i++) {
-    if (newArray.indexOf(numbers[i]) === -1) {
-        newArray.push(numbers[i]);
-    }
-}
-console.log(newArray); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
- */
-
-// Solution 03
-
-console.log('Using Spreed: ', [...new Set(numbers)]); //[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log('New Number_01: ', new_num); // 9007199254740992n
+console.log('New Number_02: ', ++new_num); // 9007199254740993n
+console.log('New Number_03: ', ++new_num); // 9007199254740994n
+console.log('New Number_04: ', ++new_num); // 9007199254740995n
+console.log('New Number_05: ', ++new_num); // 9007199254740996n
