@@ -1,22 +1,18 @@
 // Tricky JS Program
 console.clear();
 
-// Split Array into Chunks
-const chunk = (myArr, n) => {
-    let chunked = [];
-    for (let element of myArr) {
-        let last = chunked[chunked.length - 1];
-        if (!last || last.length === n) {
-            chunked.push([element]);
-        } else {
-            last.push(element);
-        }
-    }
-    return chunked;
-};
+// remove duplicate element from an array in JavaScript
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// Solution 01
+let obj = {};
+for (let i of numbers) {
+    obj[i] = true;
+}
+console.log('Object', obj);
 
-console.log(`Given Array: `, numbers); // 1, 2, 3, 4, 5, 6, 7, 8, 9, 0
+let obj_keys = Object.keys(obj);
+console.log(obj_keys); // ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-console.log(`Chunked Array: `, chunk(numbers, 2)); // [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ], [ 9, 0 ] ]
+let newArray = obj_keys.map(Number);
+console.log(newArray); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
