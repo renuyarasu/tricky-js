@@ -21,7 +21,7 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
 // Solution 02
 
-let newArray = [];
+/* let newArray = [];
 let array_length = numbers.length;
 
 for (let i = 0; i < array_length; i++) {
@@ -30,3 +30,8 @@ for (let i = 0; i < array_length; i++) {
     }
 }
 console.log(newArray); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+ */
+
+// Solution 03
+
+console.log('Using Spreed: ', [...new Set(numbers)]); //[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
