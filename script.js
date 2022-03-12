@@ -12,22 +12,13 @@ console.clear();
 // 06. wait function
 
 
-// 1. Check if an element is visible in the viewport
-// IntersectionObserver is a great way to check if an element is visible in the
+// 2. Detect device
+// You can use the navigator.userAgent to gain minute insights and detect the device running the application
 
-const callback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // `entry.target` is the dom element
-        console.log(`${entry.target.id} is visible`);
-      }
-    });
-  };
-  const options = {
-    threshold: 1.0,
-  };
-  const observer = new IntersectionObserver(callback, options);
-  const btn = document.getElementById("btn");
-  const bottomBtn = document.getElementById("bottom-btn");
-  observer.observe(btn);
-  observer.observe(bottomBtn);
+const detectDeviceType = () =>
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+    ? "Mobile"
+    : "Desktop";
+console.log(detectDeviceType());
