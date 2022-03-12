@@ -11,12 +11,12 @@ console.clear();
 // 07. Generate Random Color
 
 
-// 03. Unique Elements (Set)
-// Every language has its own implementation of Hash List, in JavaScript, it is called Set. You can easily get the unique elements from an array using the Set Data Structure.
+// 04. Detect Dark Mode
+// With the rising popularity of dark mode, it is ideal to switch your app to dark mode if the user has it enabled in their device. Luckily, media queries can be utilized for making the task a walk in the park.
 
-let unique_elements = (arr) => [...new Set(arr)]
+const isDarkMode  = () => 
+window.matchMedia && 
+window.matchMedia ('(prefers-color-scheme: dark)').matches;
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0,];
-
-let result = unique_elements(arr);
-console.log(result); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+let result = isDarkMode();
+console.log(result); 
