@@ -12,9 +12,7 @@ console.clear();
 // 06. wait function
 
 
-// 4. Get the parameters from the URL
-// JavaScript makes fetching the parameters from any address a walk in the park using the URL object.
+// 5. Deep copy an object with ease
+// You can deep copy any object by converting it to a string and back to an object.
 
-const url = new URL(window.location.href);
-const paramValue = url.searchParams.get("paramName");
-console.log(paramValue);
+const deepCopy = (obj) => JSON.parse(JSON.stringify(obj));
