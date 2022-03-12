@@ -12,13 +12,11 @@ console.clear();
 // 06. wait function
 
 
-// 2. Detect device
-// You can use the navigator.userAgent to gain minute insights and detect the device running the application
+// 3. Hide elements
+// You can just toggle the visibility of an element using the style.visibility property and in case you want to remove it from the render flow, you can use the style.display property.
 
-const detectDeviceType = () =>
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  )
-    ? "Mobile"
-    : "Desktop";
-console.log(detectDeviceType());
+const hideElement = (element, removeFromFlow = false) => {
+  removeFromFlow
+    ? (element.style.display = "none")
+    : (element.style.visibility = "hidden");
+};
