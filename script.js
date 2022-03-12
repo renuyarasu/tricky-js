@@ -12,11 +12,9 @@ console.clear();
 // 06. wait function
 
 
-// 3. Hide elements
-// You can just toggle the visibility of an element using the style.visibility property and in case you want to remove it from the render flow, you can use the style.display property.
+// 4. Get the parameters from the URL
+// JavaScript makes fetching the parameters from any address a walk in the park using the URL object.
 
-const hideElement = (element, removeFromFlow = false) => {
-  removeFromFlow
-    ? (element.style.display = "none")
-    : (element.style.visibility = "hidden");
-};
+const url = new URL(window.location.href);
+const paramValue = url.searchParams.get("paramName");
+console.log(paramValue);
