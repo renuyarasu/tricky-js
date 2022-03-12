@@ -2,9 +2,18 @@
 console.clear();
 
 // 7 Killer One-Liners in JavaScript
-// Shuffle Array
-const shuffle_array = (arr) => arr.sort(() => Math.random() - 0.5);
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// 01. Shuffle Array
+// 02. Copy to Clipboard
+// 03. Unique Elements
+// 04. Detect Dark Mode
+// 05. Scroll To Top
+// 06. Scroll To Bottom
+// 07. Generate Random Color
 
-let result = shuffle_array(arr);
+
+// 02. Copy to Clipboard
+
+const copyToClipboard = (text) => navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
+
+let result = copyToClipboard("Hello World!");
 console.log(result);
