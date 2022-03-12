@@ -11,7 +11,7 @@ console.clear();
 // 07. Generate Random Color
 
 
-// 05. Scroll To Top
-// Beginners very often find themselves struggling with scrolling elements into view properly. The easiest way to scroll elements is to use the scrollIntoView method. Add behavior: "smooth" for a smooth scrolling animation.
+// 06. Scroll To Bottom
+// Just like the scrollToTop method, the scrollToBottom method can easily be implemented using the scrollIntoView method, only by switching the block value to end.
 
-const scrollToTop = (element) => element.scrollIntoView({ behavior: "smooth", block: "start" });
+const scrollToBottom = (element) =>  element.scrollIntoView({ behavior: "smooth", block: "end" });
