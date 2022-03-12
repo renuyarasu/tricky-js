@@ -11,7 +11,8 @@ console.clear();
 // 07. Generate Random Color
 
 
-// 06. Scroll To Bottom
-// Just like the scrollToTop method, the scrollToBottom method can easily be implemented using the scrollIntoView method, only by switching the block value to end.
+// 07. Generate Random Color
+// Does your application rely on random color generation? Look no further, the following snippet got you covered!
 
-const scrollToBottom = (element) =>  element.scrollIntoView({ behavior: "smooth", block: "end" });
+const generate_random_hex_color = () => `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+console.log(generate_random_hex_color());
