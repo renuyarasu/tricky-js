@@ -11,9 +11,12 @@ console.clear();
 // 07. Generate Random Color
 
 
-// 02. Copy to Clipboard
+// 03. Unique Elements (Set)
+// Every language has its own implementation of Hash List, in JavaScript, it is called Set. You can easily get the unique elements from an array using the Set Data Structure.
 
-const copyToClipboard = (text) => navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
+let unique_elements = (arr) => [...new Set(arr)]
 
-let result = copyToClipboard("Hello World!");
-console.log(result);
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0,];
+
+let result = unique_elements(arr);
+console.log(result); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
