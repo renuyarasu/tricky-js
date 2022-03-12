@@ -11,12 +11,7 @@ console.clear();
 // 07. Generate Random Color
 
 
-// 04. Detect Dark Mode
-// With the rising popularity of dark mode, it is ideal to switch your app to dark mode if the user has it enabled in their device. Luckily, media queries can be utilized for making the task a walk in the park.
+// 05. Scroll To Top
+// Beginners very often find themselves struggling with scrolling elements into view properly. The easiest way to scroll elements is to use the scrollIntoView method. Add behavior: "smooth" for a smooth scrolling animation.
 
-const isDarkMode  = () => 
-window.matchMedia && 
-window.matchMedia ('(prefers-color-scheme: dark)').matches;
-
-let result = isDarkMode();
-console.log(result); 
+const scrollToTop = (element) => element.scrollIntoView({ behavior: "smooth", block: "start" });
