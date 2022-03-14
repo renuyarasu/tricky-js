@@ -11,13 +11,4 @@ console.clear();
 // 05. Deep copy an object with ease
 // 06. wait function
 
-
-// 6. wait function
-// JavaScript does ship with a setTimeout function, but it does not return a Promise object, making it hard to use in async functions. So we have to write our own wait/sleep function.
-
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const asyncFunc = async () => {
-    await wait(1000);
-    console.log("async");
-};
-asyncFunc(); // async
+console.log(setTimeout(clearSessionData, 90000));
